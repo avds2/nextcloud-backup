@@ -619,11 +619,11 @@ check_db_connectivity() {
 # SQL dump (overhead), and the final .tar.xz archive (typically < 1× but worst
 # case 1×), with a safety margin.
 check_disk_space() {
-    log INFO "Estimating required disk space (3× NC_DIR size)..."
+    log INFO "Estimating required disk space (2× NC_DIR size)..."
 
     local nc_size_kb available_kb required_kb
     nc_size_kb="$(du -sk "${NC_DIR}" 2>/dev/null | awk '{print $1}')"
-    required_kb=$(( nc_size_kb * 3 ))
+    required_kb=$(( nc_size_kb * 2 ))
     available_kb="$(df -k "${BACKUP_ROOT}" | awk 'NR==2 {print $4}')"
 
     local nc_mb required_mb available_mb
