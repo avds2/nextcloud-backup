@@ -313,7 +313,7 @@ load_env_file() {
 # apply_defaults
 # Applies built-in default values to optional configuration variables that
 # were not set or were left empty in the env file.
-# Also merges the three permanent default exclude patterns into EXCLUDES,
+# Also merges the permanent default exclude patterns into EXCLUDES,
 # regardless of whether the user defined custom excludes or not.
 apply_defaults() {
     # Scalar defaults
@@ -327,7 +327,7 @@ apply_defaults() {
     INCLUDES=("${INCLUDES[@]+"${INCLUDES[@]}"}")
     EXCLUDES=("${EXCLUDES[@]+"${EXCLUDES[@]}"}")
 
-    # These three patterns are always excluded to prevent storing large,
+    # These patterns are always excluded to prevent storing large,
     # regenerable Nextcloud caches in the backup archive.
     local -ra permanent_excludes=(
         "--exclude=updater-*"
@@ -335,6 +335,7 @@ apply_defaults() {
         "--exclude=data/*/thumbnails"
         "--exclude=data/appdata_*/preview"
         "--exclude=data/appdata_*/appstore"
+		"--exclude=data/*/files_trashbin"
     )
 
     # Merge permanent excludes into EXCLUDES, skipping any exact duplicates
