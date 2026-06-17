@@ -632,7 +632,7 @@ check_disk_space() {
     available_mb=$(( available_kb / 1024 ))
 
     log INFO "  NC_DIR size      : ${nc_mb} MB"
-    log INFO "  Required (3×)    : ${required_mb} MB"
+    log INFO "  Required (2×)    : ${required_mb} MB"
     log INFO "  Available        : ${available_mb} MB in ${BACKUP_ROOT}"
 
     if [[ ${available_kb} -lt ${required_kb} ]]; then
