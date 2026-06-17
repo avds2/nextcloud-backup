@@ -16,7 +16,7 @@
 #           └── ...
 #
 # Version : 1.0.0
-# Requires: bash >= 4.2, mariadb-client, php, tar, xz, curl,
+# Requires: bash >= 4.3, mariadb-client, php, tar, xz, curl,
 #           find, df, du, awk, sudo
 # ==============================================================================
 
