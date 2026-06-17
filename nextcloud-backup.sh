@@ -614,7 +614,7 @@ check_db_connectivity() {
 }
 
 # check_disk_space
-# Estimates that at least 3× the current size of NC_DIR is free in BACKUP_ROOT.
+# Estimates that at least 2× the current size of NC_DIR is free in BACKUP_ROOT.
 # The multiplier accounts for: the raw directory tree (1×), the uncompressed
 # SQL dump (overhead), and the final .tar.xz archive (typically < 1× but worst
 # case 1×), with a safety margin.
