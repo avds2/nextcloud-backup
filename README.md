@@ -291,7 +291,7 @@ sudo nano /opt/nextcloud-backup/nextcloud-backup.env
 | Variable | Default | Description |
 |---|---|---|
 | `INCLUDES` | empty | Bash array of paths relative to `NC_DIR` to include. Empty means archive all of `NC_DIR`. |
-| `EXCLUDES` | cache/updater/appstore defaults | Bash array of tar exclude patterns relative to `NC_DIR`. |
+| `EXCLUDES` | cache/updater/appstore/previews/trashbin defaults | Bash array of tar exclude patterns relative to `NC_DIR`. |
 | `RETENTION_DAYS` | `7` | Archives older than this many days are removed after a successful backup. Set `0` to disable rotation. |
 | `XZ_LEVEL` | `6` | xz compression preset. `0` is fastest/largest; `9` is slowest/smallest and uses more memory. |
 | `NTFY_URL` | empty | ntfy topic URL for start, failure, and success notifications. Empty disables notifications. |
